@@ -16,5 +16,5 @@ Example volumes to be mounted:
 
 ### Example
 ```
-docker run -v /tmp/s3-sync-logs:/logs/ -v ~/Documents:/data/ -e "ACCESS_KEY=YOURACCESSKEY" -e "SECRET_KEY=YOURSECRET" -e "S3PATH=s3://s3bucket/" -e "S3CMDPARAMS=PARAMS" tiboonn/s3sync
+docker run -v /tmp/s3-sync-logs:/logs/ -v ~/Documents:/data/ -e "ACCESS_KEY=YOURACCESSKEY" -e "SECRET_KEY=YOURSECRET" -e "S3PATH=s3://s3bucket/" -e "S3CMDPARAMS=PARAMS" tiborhercz/s3sync
 ```
