@@ -1,8 +1,7 @@
 name: CI to Docker Hub
 on:
   push:
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+    branches: [ main ]
 jobs:
 
   build:
@@ -38,7 +37,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags:  tiborhercz/s3sync:${{ steps.meta.outputs.tags }}
+          tags:  tiborhercz/s3sync:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
