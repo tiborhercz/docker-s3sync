@@ -9,9 +9,9 @@ RUN apt-get update && \
     
 RUN locale-gen en.UTF-8
 
-export LANG=en.UTF-8
-export LC_ALL=en.UTF-8
-export LANGUAGE=en.UTF-8
+RUN export LANG=en.UTF-8
+RUN export LC_ALL=en.UTF-8
+RUN export LANGUAGE=en.UTF-8
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip \
